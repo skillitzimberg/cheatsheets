@@ -583,7 +583,6 @@
 
       <div class="tab-pane" id="cheat-sheet">
         <h1 class="weekDay">Week One: Tuesday</h1>
-
         <h1>Debugging HTML and CSS</h1>
         <h2>Terminology</h2>
         <p><hr></p>
@@ -604,7 +603,6 @@
 
       <div class="tab-pane" id="cheat-sheet">
         <h1 class="weekDay">Week One: Tuesday</h1>
-
         <h1>GitHub Pages</h1>
         <h2>Using GitHub Pages</h2>
         <p><hr></p>
@@ -915,6 +913,217 @@
         <li>Mozilla Developer Network - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">@media</a></li>
         <li>Example usages of media queries - <a href="http://mediaqueri.es/">Mediaquer.ies</a></li>
         </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Thursday</h1>
+        <h1>Introduction to Bootstrap</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+        <li><p><strong>Front-End</strong>: The portion of a website or application that the user actively interacts with. Things like the menus, navbars, links, and CSS designs. </p></li>
+        <li><p><strong>Framework:</strong> A foundation of pre-built tools, software, code, and other resources we can use to create a project more easily than if we created it from scratch.</p></li>
+        <li><p><strong>Front-End Frameworks:</strong> Pre-built code that assists us in creating the front-end of our website. That is, the CSS, designs, layouts, and portions the user interacts with. </p></li>
+        <li><p><strong>Bootstrap</strong>: One of the most widely-used free front-end frameworks.</p></li>
+        </ul>
+        <h2>Additional Resources</h2>
+        <p><hr></p>
+        <ul>
+        <li><p><a href="http://expo.getbootstrap.com/">Expo of Sites Using Bootstrap</a></p></li>
+        <li><p><a href="http://getbootstrap.com/">Bootstrap&#39;s Website</a></p></li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Thursday</h1>
+        <h1>Bootstrap: Downloading & Installing</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+        <li><p><strong>Minified</strong>: Whitespace and other characters unnecessary for <em>computers</em> to read the code has been removed. This means code is less readable to human eyes, but has a smaller file size. Minified files generally include a <code class="prettyprint">.min</code> in their name. </p></li>
+        <li><p><strong>CDN</strong>: Short for &quot;content delivery network&quot;, a network of servers that deliver content to users. We can load Bootstrap into a project by linking to its CDN location. This simply links to an online version of Bootstrap&#39;s stylesheet(s) instead of a version we download and place into our project&#39;s directory. </p></li>
+        </ul>
+        <h2>Tips</h2>
+        <p><hr></p>
+        <ul>
+        <li><p>The downside to installing Bootstrap with a CDN link is that you&#39;ll be unable to see Bootstrap styles in your project without an internet connection, because the project needs to load the online stylesheet to use Bootstrap&#39;s CSS. </p></li>
+        <li><p>For now, we&#39;ll use either the <code class="prettyprint">bootstrap.css</code> file, or the <code class="prettyprint">bootstrap.min.css</code> files in our projects. </p></li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Thursday</h1>
+        <h1>Bootstrap: Basic Elements</h1>
+        <h2>Overview</h2>
+        <p><hr></p>
+        <p>Here&#39;s a brief overview of the Bootstrap elements covered in this lesson:</p>
+        <h3>Container</h3>
+        <p>A <a href="http://getbootstrap.com/css/#overview-container">container</a> wraps content and adds padding. We can implement a container like this:</p>
+        <pre><code class="prettyprint lang-html">&lt;div class=&quot;container&quot;&gt;
+          ...
+        &lt;/div&gt;
+        </code></pre>
+        <p>It&#39;s generally recommended to house the entirety of your <code class="prettyprint">&lt;body&gt;</code> in a container, to provide padding to all content.</p>
+        <h3>Jumbotron</h3>
+        <p>A <a href="http://getbootstrap.com/components/#jumbotron">Jumbotron</a> is a large box that can help draw emphasis to certain areas of your site. They&#39;re often used at the top of the page. We can add a Jumbotron like this:</p>
+        <pre><code class="prettyprint lang-html">&lt;div class=&quot;container&quot;&gt;
+           &lt;div class=&quot;jumbotron&quot;&gt;
+                ...
+           &lt;/div&gt;
+        &lt;/div&gt;
+        </code></pre>
+        <h3>Blockquotes</h3>
+        <p><a href="http://getbootstrap.com/css/#type-blockquotes">Blockquotes</a> are used to create nicely-formatted quote blocks. We can implement them like this: </p>
+        <pre><code class="prettyprint lang-html">&lt;blockquote&gt;
+           &lt;p&gt;&quot;Quote here!&quot;&lt;/p&gt;
+           &lt;footer&gt;Speaker here&lt;/footer&gt;
+        &lt;/blockquote&gt;
+
+        </code></pre>
+        <h3>Helper Classes</h3>
+        <p><a href="http://getbootstrap.com/css/#helper-classes">Helper classes</a> can be used to add formatting to almost any Bootstrap element. There are many different helper classes. One example is adding background color, which we can do like this:</p>
+        <pre><code class="prettyprint lang-html">&lt;p class=&quot;bg-success&quot;&gt;This text has a green background!&lt;/p&gt;
+        &lt;p class=&quot;bg-danger&quot;&gt;This text has a red background!&lt;/p&gt;
+        </code></pre>
+        <p>See the helper class documentation for more details. </p>
+        <h3>Wells</h3>
+        <p><a href="http://getbootstrap.com/components/#wells">Wells</a> add a visual effect that makes content appear inset or embossed into the page. We can create a well like this:</p>
+        <pre><code class="prettyprint lang-html">&lt;div class=&quot;well&quot;&gt;
+           ...
+        &lt;/div&gt;
+        </code></pre>
+        <h3>Panel</h3>
+        <p>A <a href="http://getbootstrap.com/components/#panels">panel</a> wraps content in a box and offers a section for a title and a body. We can add one that doesn&#39;t include a title section like this:</p>
+        <pre><code class="prettyprint lang-html"> &lt;div class=&quot;panel panel-default&quot;&gt;
+            &lt;div class=&quot;panel-body&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        </code></pre>
+        <p>Or one that does include a title section like this:</p>
+        <pre><code class="prettyprint lang-html"> &lt;div class=&quot;panel panel-default&quot;&gt;
+            &lt;div class=&quot;panel-heading&quot;
+                &lt;p class=&quot;panel-title&quot;&gt;Title&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;panel-body&quot;&gt;
+                &lt;p&gt;Body content&lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        </code></pre>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Thursday</h1>
+        <h1>Bootstrap: Grid System</h1>
+        <h2>Overview</h2>
+        <p><hr></p>
+        <ul>
+        <li>The Bootstrap grid system contains just two parts: Rows and columns. Both of them are simply div tags with either a row or column class applied to them.</li>
+        </ul>
+        <h3>Rows</h3>
+        <ul>
+        <li>HTML for the row is always the same. It&#39;s a div with the class <code class="prettyprint">row</code>:</li>
+        </ul>
+        <pre><code class="prettyprint lang-html">&lt;div class=&quot;container&quot;&gt;
+          &lt;div class=&quot;row&quot;&gt;
+                ...
+          &lt;/div&gt;
+        &lt;/div&gt;
+        </code></pre>
+        <ul>
+        <li>Rows must reside in a container. But they don&#39;t need their own special container; everything within the <code class="prettyprint">&lt;body&gt;</code> tags can simply be housed in a container div.</li>
+        <li>All columns <em>must</em> reside within a row. </li>
+        <li>Each row may contain up to 12 column units. </li>
+        </ul>
+        <h3>Columns</h3>
+        <ul>
+        <li>Columns can include just about any valid HTML.</li>
+        <li>Their Bootstrap class always begins with <code class="prettyprint">col</code>.<br></li>
+        <li> Columns also have more customizable options than rows. Their class name contains two additional pieces of information denote what media queries should be applied to it, and how many units its width should be. </li>
+        </ul>
+        <h4>Column Class Name Format</h4>
+        <p>The format for these class names looks like this:</p>
+        <pre><code class="prettyprint">col-media query-width
+        </code></pre>
+        <p><strong>Media Query</strong></p>
+        <ul>
+        <li><p>The media query portion of the column class name has several options:</p></li>
+        <li><p><code class="prettyprint">xs</code>: &quot;Extra small&quot;</p></li>
+        <li><p><code class="prettyprint">sm</code>: &quot;Small&quot;</p></li>
+        <li><p><code class="prettyprint">md</code>: &quot;Medium&quot;</p></li>
+        <li><p><code class="prettyprint">lg</code>: &quot;Large&quot;</p></li>
+        </ul>
+        <p>Each of these refer to built-in media queries that can be applied to the columns. </p>
+        <p><strong>Width</strong></p>
+        <p>The width part of the column class name may be any number from 1 to 12. A row can <em>only</em> be 12 units wide. So, a row could fit 12 columns with a width of <code class="prettyprint">1</code>, 2 columns with a width of <code class="prettyprint">6</code>, or 3 columns with a width of <code class="prettyprint">4</code>. </p>
+        <h2>Examples</h2>
+        <p><Hr></p>
+        <p>Here is an example column that is 12 units wide. It is the only column in its row, because a row may only contain 12 units:</p>
+        <pre><code class="prettyprint lang-html">&lt;div class=&quot;container&quot;&gt;
+          &lt;div class=&quot;row&quot;&gt;
+             &lt;div class=&quot;col-md-12&quot;&gt;...&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        </code></pre>
+        <p>We could also create a row with 12 columns with a width of <code class="prettyprint">1</code>: </p>
+        <pre><code class="prettyprint lang-html">&lt;div class=&quot;container&quot;&gt;
+           &lt;div class=&quot;row&quot;&gt;
+              &lt;div class=&quot;col-md-1&quot;&gt;...&lt;/div&gt;
+              &lt;div class=&quot;col-md-1&quot;&gt;...&lt;/div&gt;
+              &lt;div class=&quot;col-md-1&quot;&gt;...&lt;/div&gt;
+              &lt;div class=&quot;col-md-1&quot;&gt;...&lt;/div&gt;
+              &lt;div class=&quot;col-md-1&quot;&gt;...&lt;/div&gt;
+              &lt;div class=&quot;col-md-1&quot;&gt;...&lt;/div&gt;
+              &lt;div class=&quot;col-md-1&quot;&gt;...&lt;/div&gt;
+              &lt;div class=&quot;col-md-1&quot;&gt;...&lt;/div&gt;
+              &lt;div class=&quot;col-md-1&quot;&gt;...&lt;/div&gt;
+              &lt;div class=&quot;col-md-1&quot;&gt;...&lt;/div&gt;
+              &lt;div class=&quot;col-md-1&quot;&gt;...&lt;/div&gt;
+              &lt;div class=&quot;col-md-1&quot;&gt;...&lt;/div&gt;
+           &lt;/div&gt;
+        &lt;/div&gt;
+        </code></pre>
+        <p>The HTML above would result in:</p>
+        <p><img src="https://www.dropbox.com/s/g80n7o0ox2fwp6h/12-column-row.png?raw=1" alt="12-column-row"></p>
+        <p>Rows may also contain a combination of different column widths, as long as they do not surpass 12. For instance, a row could contain one column with a width of <code class="prettyprint">8</code> and another with a width of <code class="prettyprint">4</code>, because this still equals 12:</p>
+        <pre><code class="prettyprint lang-html">&lt;div class=&quot;container&quot;&gt;
+          &lt;div class=&quot;row&quot;&gt;
+            &lt;div class=&quot;col-md-8&quot;&gt;...&lt;/div&gt;
+            &lt;div class=&quot;col-md-4&quot;&gt;...&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+        </code></pre>
+        <p>This would result in: </p>
+        <p><img src="https://www.dropbox.com/s/cgsct585bzvqb9r/8-plus-4-column.png?raw=1" alt="different-column-sizes"></p>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Thursday</h1>
+        <h1>Bootstrap: Customizing Styles</h1>
+        <h2>Summary</h2>
+        <p><hr></p>
+        <p>After integrating Bootstrap, if you&#39;d like to change some of the default styles it is better to write your own stylesheet that overrides those styles than to edit the Bootstrap&#39;s.</p>
+        <p>Because CSS is <em>cascading</em>, styles that appear later will override styles that appear sooner. Therefore, for our styles to take precedence, we must link our stylesheet <em>after</em> the Bootstrap stylesheet in our project, as seen in the <code class="prettyprint">&lt;head&gt;</code> tags below: </p>
+        <h2>Examples</h2>
+        <p><hr></p>
+        <p>Here&#39;s an example of how to override Bootstrap&#39;s styles to make the main headers bold:</p>
+        <div class="filename">bootstrap-playground.html</div>
+        <pre><code class="prettyprint lang-html">&lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+          &lt;head&gt;
+            &lt;link href=&quot;css/bootstrap.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+            &lt;link href=&quot;css/styles.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;
+            &lt;title&gt;A bit of Boostrap&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;A bit of Bootstrap&lt;/h1&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+        </code></pre>
+        <div class="filename">styles.css</div>
+        <pre><code class="prettyprint lang-css">h1 {
+          font-weight: bold;
+        }
+        </code></pre>
       </div>
 
     </div>
