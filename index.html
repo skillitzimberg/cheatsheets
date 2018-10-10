@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" media="all" href="css/styles.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon-d0e8ff63da72a0c5ea15ebc045a7f9d2979d211a12e596a5ed5f5b1534e78919.png" />
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet" type="text/css">
+    <title>EPICODUS CHEATSHEETS</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>EPICODUS CHEATSHEETS</h1>
+      <div>
+        <h1 class="weekDay">Week One: Monday</h1>
+        <h1>Introduction to the Command Line</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong>Graphical User Interface (GUI)</strong>: An interface that allows users to interact with the computer through graphics and buttons and other visual, dynamic options.</p></li>
+          <li><p><strong>The Terminal</strong>: The area or program in our computer that allows us to access the command line.</p></li>
+          <li><p><strong>Command Line</strong>: A text-based interface that allows users to interact with the computer by entering text commands at a prompt. Also known as the terminal interface.</p></li>
+          <li><p><strong>Terminal Interface</strong>: Another name for the command line.</p></li>
+          <li><p><strong>Prompt</strong>: The portion of text that precedes the cursor in the command line. It provides contextual information, including the account you&#39;re currently logged into the computer with, and your current location in your computer&#39;s directories. The prompt and command line are separated by a <code class="prettyprint">$</code> symbol.</p></li>
+        </ul>
+
+        <h2>Tips</h2>
+        <p><hr></p>
+        <ul>
+          <li>When you see this symbol preceding a command, know that you are not required to <em>literally type</em> a dollar sign into the command line. You will only type the command listed <em>after</em> the dollar sign. The dollar sign simply denotes that the command is meant to be executed in the command line.</li>
+        </ul>
+
+        <h2>Overview</h2>
+        <p><hr></p>
+        <ul>
+          <li>A graphical user interface (GUI) allows users to interact with a computer through menus, buttons, and other options we can see on the screen. The terminal, on the other hand, allows us to interact with a computer by typing text-only commands directly into the command line.</li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Monday</h1>
+
+        <h1>Interacting with the Command Line</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong>Path</strong>: The unique location of a file or folder in the file system hierarchy. Example: <em>Users/Andrea/Pictures/fun-day.jpg</em> is the path for the image called <em>fun-day.jpg</em>.</p></li>
+          <li><p><strong>Directory</strong>: Another name for a folder in file system hierarchy. Example: <em>Users/Andrea/Pictures/fun-day.jpg</em> is a path that has 3 directories: <em>Users</em>, <em>Andrea</em> and <em>Pictures</em>.</p></li>
+          <li><p><strong>Subdirectory</strong>: A directory within another directory. Example: In the path, <em>Users/Andrea/Pictures/fun-day.jpg</em> , <em>Andrea</em> is a subdirectory of <em>Users</em> and <em>Pictures</em> is a subdirectory of <em>Andrea</em>.</p></li>
+          <li><p><strong>Home Directory</strong>: The topmost level of your user directory; the directory where you begin when you open the terminal. (To view your home directory in the <em>Finder</em> (the graphical user interface on the Mac), click somewhere on the desktop, click on the <strong>Go</strong> menu at the top of the screen, and select the <strong>Home</strong> menu option. To get to your home directory in the <em>Terminal</em>, type <code class="prettyprint">cd ~</code> at the command line prompt.)</p></li>
+        </ul>
+
+        <h2>Frequently Used Commands:</h2>
+        <p><hr></p>
+        <p>For reference, here are all the commands we learned about in this lesson. Feel free to reference this as much as you need! Pretty soon, these will become second-nature: </p>
+        <ul>
+          <li><code class="prettyprint">$ pwd</code>: prints the path to the current working directory to the screen.</li>
+          <li><code class="prettyprint">$ ls</code>: lists out the directories (folders) and files in the current working directory.</li>
+          <li><code class="prettyprint">$ ls directory-name</code>: lists out the directories and files in the specified directory.</li>
+          <li><code class="prettyprint">$ cd directory-name</code>: changes the current directory to the one specified.</li>
+          <li><code class="prettyprint">$ cd ..</code>: change current directory up one level to the parent directory.</li>
+          <li><code class="prettyprint">$ cd ~</code>: change the current directory to the home directory (<code class="prettyprint">/Users/Guest</code> on Epicodus computers).</li>
+          <li><code class="prettyprint">$ mkdir new-directory-name</code>: creates a new directory (folder) in the current working directory unless otherwise specified.</li>
+          <li><code class="prettyprint">$ touch new-file-name</code>: creates a new, empty file in the current working directory unless otherwise specified.</li>
+          <li><code class="prettyprint">$ mv file-name new-file-name</code>: moves the contents of the first file into the second file, essentially renaming the file. First file is removed.</li>
+          <li><code class="prettyprint">$ cp file-name new-file-name</code>: creates an exact copy of the contents of the first file into the second file. Both files exist.</li>
+          <li><code class="prettyprint">$ rm file-name</code>: deletes the file.</li>
+          <li><code class="prettyprint">$ rm -r directory-name</code>: deletes the directory and all of the files within it. Be very careful with this command.</li>
+          <li><code class="prettyprint">$ cat file-name</code>: prints out the contents of the specified file to the screen.</li>
+          <li><code class="prettyprint">$ cd Desktop</code> change directory to a directory named Desktop (located inside of the current directory)</li>
+          <li><code class="prettyprint">$ cd /Users/Guest</code> change to /Users/Guest directory (which happens to be the home directory on the Epicodus computers)</li>
+          <li><code class="prettyprint">$ cp Documents/hi.txt .</code> copy the file <code class="prettyprint">hi.txt</code> from the Documents directory to whatever directory you are currently working in</li>
+          <li><code class="prettyprint">$ mv Documents/hi.txt .</code> move the file <code class="prettyprint">hi.txt</code> from the Documents directory to whatever directory you are currently working in</li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Monday</h1>
+
+        <h1>Text Editor: Atom</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong>Text editor</strong>: Software designed to write text in a raw format without formatting or styling added. </p></li>
+          <li><p><strong>TextEdit</strong>: The default text editor that comes on a Mac device; available in Applications.</p></li>
+          <li><p><strong>Notepad</strong>: The default text editor that comes on a Windows device; available through the Start menu.</p></li>
+          <li><p><strong>Nano</strong>: A console-based text editor that comes as part of the Mac Terminal application.</p></li>
+          <li><p><strong>Atom</strong>: Free, open source text editor; created for developers writing code.</p></li>
+          <li><p><strong>Package manager</strong>: Software that is designed to help manage other programs that are installed or need to be installed on a device.</p></li>
+        </ul>
+
+        <h2>Additional Resources</h2>
+        <p><hr></p>
+        <ul>
+          <li><p>Atom Website: <a href="https://atom.io/">https://atom.io/</a></p></li>
+          <li><p>Atom Flight Manual: <a href="https://atom.io/docs">https://atom.io/docs</a></p></li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Monday</h1>
+
+        <h1>Git and GitHub</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong>Git</strong>: A system for tracking changes between different versions of code.</p></li>
+          <li><p><strong>GitHub</strong>: A website that works with Git to store, share, organize and update source code.</p></li>
+          <li><p><strong>Version control system</strong>: A system that helps developers manage the various versions of their code.</p></li>
+          <li><p><strong>Commit</strong>: In Git, a snapshot of all the folders and files of a project that is saved to the project history.</p></li>
+          <li><p><strong>Repository</strong>: In Git, a container that holds all of the source code for a project.</p></li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Monday</h1>
+
+        <h1>Git Configurations</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong>Vim</strong>: Default text editor designed for use from the command line.</p></li>
+          <li><p><strong>Global</strong>: An option in many command line commands that applies the changes everywhere instead of just in the current directory.</p></li>
+        </ul>
+
+        <h2>Configurations</h2>
+        <p><hr></p>
+        <h3>Atom as Default Editor</h3>
+        <pre><code class="prettyprint lang-shell">`$ echo &quot;export EDITOR=&#39;atom -w&#39;&quot; &gt;&gt; ~/.bash_profile`.
+        </code></pre>
+
+        <h3>Color Output</h3>
+        <pre><code class="prettyprint lang-shell">$ git config --global color.ui true
+        </code></pre>
+        <h3>Git Ignore Files</h3>
+        <ul>
+          <li>Add this file to your home directory:</li>
+        </ul>
+
+        <div class="filename">.gitignore_global</div>
+          <pre><code class="prettyprint lang-shell"># OS generated files #
+          ######################
+          .DS_Store
+          .DS_Store?
+          ._*
+          .Spotlight-V100
+          .Trashes
+          ehthumbs.db
+          Thumbs.db
+          </code></pre>
+          <ul>
+            <li>Run this command to use it:</li>
+          </ul>
+          <pre><code class="prettyprint lang-shell">$ git config --global core.excludesfile ~/.gitignore_global
+          </code></pre>
+        </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Monday</h1>
+
+        <h1>Practice: Git Project Setup</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong>initialize</strong>: In Git, to create a new, empty repository to track changes to the project directory. Created in the project directory.</p></li>
+          <li><p><strong>global</strong>: A configuration option that refers to every directory in every location of the device.</p></li>
+          <li><p><strong>hidden files</strong>: Are not listed with an <code class="prettyprint">ls</code> terminal command, but will be displayed with an <code class="prettyprint">ls -a</code> terminal command. The <em>.git</em> directory is hidden by default. </p></li>
+        </ul>
+
+        <h2>Daily Git Workflow</h2>
+        <p><hr></p>
+        <h3>Set up name and email</h3>
+        <h4>Pair Programming</h4>
+        <p>Add this file to home directory (changing name, initials and emails):</p>
+
+        <div class="filename">.pairs</div>
+          <pre><code class="prettyprint lang-text">pairs:
+            al: Ada Lovelace
+            edlf: Enrique de la Fuente
+          email:
+            al: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="48292c2926293c273a08252d662b2725">[email&#160;protected]</a>
+            edlf: <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="ddaca8b8b8b3afb4aca8b89dbab0bcb4b1f3beb2b0">[email&#160;protected]</a>
+          </code></pre>
+
+          <h4>Solo</h4>
+          <pre><code class="prettyprint lang-shell">$ git config --global user.name &quot;Padma Patil&quot;
+          $ git config --global user.email <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f08091949d91b0959d91999cde939f9d">[email&#160;protected]</a>
+          </code></pre>
+
+          <h3>Create a new project directory with Git repository</h3>
+          <p>In terminal:</p>
+          <pre><code class="prettyprint lang-shell">$ cd Desktop
+          $ mkdir hello-world
+          $ cd hello-world
+          $ git init
+          $ git pair al edlf
+          </code></pre>
+          <p><em>Note: for solo work, the <code class="prettyprint">git pair</code> command is unnecessary.</em></p>
+
+          <h2>Git Commands</h2>
+          <p><hr></p>
+          <ul>
+          <li><p><code class="prettyprint">git init</code>: Initializes new local Git repository.</p></li>
+          <li><p><code class="prettyprint">git pair __ __</code>: When two sets of initials matching <em>.pairs</em> file are provided, uses <code class="prettyprint">pivotal_git_scripts</code> to pair two people together. </p></li>
+          <li><p><code class="prettyprint">git config --global user.name ___</code>: Globally configures Git profile for entire device (use only when working <strong>solo</strong>).</p></li>
+          <li><p><code class="prettyprint">git about</code>: Verifies the current pair assignment. </p></li>
+          </ul>
+        </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Monday</h1>
+
+        <h2>Pair Commit Workflow</h2>
+        <p><hr></p>
+
+        <h3>Add file(s) to track in Git</h3>
+        <p>In terminal:</p>
+        <pre><code class="prettyprint lang-shell">$ git add hello-world.html
+        </code></pre>
+        <p>or if multiple files should be added the <code class="prettyprint">.</code> can be used to add all files:</p>
+        <pre><code class="prettyprint lang-shell">$ git add .
+        </code></pre>
+
+        <h3>Commit</h3>
+        <p>In terminal:</p>
+        <pre><code class="prettyprint lang-shell">$ git-pair-commit -m &quot;add a short, descriptive present tense commit message here describing the changes made&quot;
+        </code></pre>
+        <p><em>Note: for solo work, the commit command is <code class="prettyprint">git commit</code> instead of <code class="prettyprint">git-pair-commit</code>.</em></p>
+
+        <h2>Git Commands</h2>
+        <p><hr>
+        In this reference, examples in brackets <code class="prettyprint">[xxx]</code>, should be entirely replaced by what is indicated (do not leave brackets). </p>
+        <h3>Set up configurations</h3>
+        <ul>
+          <li><p><code class="prettyprint">git config --global user.name &quot;[name]&quot;</code>- sets a SINGLE user name for all commits.</p></li>
+          <li><p><code class="prettyprint">git config --global user.email &quot;[email address]&quot;</code> - sets a SINGLE email for all commits.</p></li>
+          <li><p><code class="prettyprint">git pair [initials 1] [initials 2]</code> - using the initials from the <code class="prettyprint">.pairs</code> file in the home directory, sets the user names and emails of PAIRS on a project.</p></li>
+        </ul>
+
+        <h3>Committing</h3>
+        <ul>
+          <li><p><code class="prettyprint">git add .</code>: Adds ALL files with changes to be committed.</p></li>
+          <li><p><code class="prettyprint">git add [file]</code>: Adds the named file to be committed.</p></li>
+          <li><p><code class="prettyprint">git-pair-commit -m &quot;[message]&quot;</code>: <strong>FOR PAIRS</strong> records all of the added files/changes permanently to the version history; message should describe the changes finishing the phrase &quot;This commit will…&quot;.</p></li>
+          <li><p><code class="prettyprint">git commit -m &quot;[message]&quot;</code>: <strong>FOR SOLO WORK</strong> records all of the staged files permanently to the version history; message should describe the changes finishing the phrase &quot;This commit will…&quot;.</p></li>
+          <li><p>Example: <code class="prettyprint">git commit -m &quot;add AJAX functionality to the comments form&quot;</code></p></li>
+        </ul>
+
+        <h3>Reviewing Git Information</h3>
+        <ul>
+          <li><p><code class="prettyprint">git log</code>: Lists commit history for the current branch.</p></li>
+          <li><p><code class="prettyprint">git status</code>: Lists the files where changes have been made to be committed.</p></li>
+          <li><p><code class="prettyprint">git about</code>: Lists the information about the currently assigned pair&#39;s names.</p></li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Monday</h1>
+
+        <h1>Practice: GitHub Remote Repositories</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong>Local</strong>: In Git terms, local means located on the device that you are using.</p></li>
+          <li><p><strong>Remote</strong>: In Git terms, this means located outside of the device you are using; for example, GitHub.</p></li>
+          <li><p><strong>README</strong>: A file that provides more details information about a GitHub repository&#39;s code.</p></li>
+          <li><p><strong>Push</strong>: Copy the code from a local Git repository to a remote repository.</p></li>
+          <li><p><strong>Master</strong>: The master copy of a Git repository on a local machine, also known as the master branch.</p></li>
+          <li><p><strong>Clone</strong>: To make a copy of a repository from Github on a local machine. </p></li>
+          <li><p><strong>Origin</strong>: The default nickname given to the GitHub remote repository when it is cloned.</p></li>
+        </ul>
+
+        <h2>Git Remote Commands</h2>
+        <p><hr></p>
+        <ul>
+          <li><code class="prettyprint">$ git remote add [remote name] [remote URL]</code>: Sets up a new remote location with a name and location.<br></li>
+        </ul>
+        <p>Example: This command adds a new remote called &quot;al&quot; located at &quot;https://github.com/epicodus-lessons/hello-world&quot;:</p>
+        <pre><code class="prettyprint lang-shell">$ git remote add al https://github.com/epicodus-lessons/hello-world
+        </code></pre>
+        <ul>
+          <li><p><code class="prettyprint">$ git remote -v</code>: Shows the names and URLs for all of the remote repositories that the project&#39;s Git repository has stored.</p></li>
+          <li><p><code class="prettyprint">$ git push [remote name] [branch name]</code>: Copies the code to the remote repository from the local Git repository.</p></li>
+          <li><p><code class="prettyprint">$ git clone [remote URL]</code>: Copies the code and commit history from a remote repository to a local repository.</p></li>
+        </ul>
+
+        <h2>Tips</h2>
+        <p><hr></p>
+        <ul>
+          <li>Be sure that you are not cloning a project inside of an existing local repository. In other words, you should <em>not</em> be inside of a project directory when you run the <code class="prettyprint">git clone</code> command. Otherwise you&#39;ll end up with one git repository inside of another.</li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Monday</h1>
+
+        <h1>Hypertext Markup Language (HTML)</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong>Hypertext</strong>: Another word for a link.</p></li>
+          <li><p><strong>Markup language</strong>: A system for adding distinct instructions for how text should be formatted. HTML is an example.</p></li>
+          <li><p><strong>Angle brackets</strong>: The symbols <code class="prettyprint">&lt; &gt;</code> that are used in HTML to indicate instructions for the browser.</p></li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Monday</h1>
+        <h1>HTML: Indentation and Spacing</h1>
+        <h2>Summary</h2>
+        <p><hr></p>
+        <ul>
+          <li><p>In HTML, the beginning and ending tags of an element on multiple lines should always be left-aligned. For example, when you see <code class="prettyprint">&lt;html&gt;</code>, you should be able to visually scan the page straight down to find its closing tag (the same for <code class="prettyprint">&lt;head&gt;</code> and <code class="prettyprint">&lt;body&gt;</code>). One way to implement this is to create opening and closing tags at the same time and then add the contents.</p></li>
+          <li><p>When elements are nested within another element, they should be indented two spaces from the opening tag. For example, <code class="prettyprint">&lt;head&gt;</code> is indented two spaces from <code class="prettyprint">&lt;html&gt;</code> and <code class="prettyprint">&lt;title&gt;</code> is indented two spaces from <code class="prettyprint">&lt;head&gt;</code>.</p></li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Monday</h1>
+
+        <h1>HTML: Block Elements</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong>Block elements</strong>: HTML elements that create a &quot;block&quot; in the display by appearing on their own line.</p></li>
+          <li><p><strong>Tags</strong>: HTML annotations which indicate how the text should be formatted.</p></li>
+          <li><p><strong>P tag</strong>: An HTML tag that indicates text should be formatted in a paragraph.</p></li>
+          <li><p><strong>Opening tag</strong>: An HTML tag that appears before the text that will be formatted in an HTML document. For example, the <code class="prettyprint">&lt;p&gt;</code> in <code class="prettyprint">&lt;p&gt; This is a paragraph. &lt;/p&gt;</code> is the opening tag.</p></li>
+          <li><p><strong>Closing tag</strong>: An HTML tag that appears after the text that is formatted. It matches the opening tag but begins with a <code class="prettyprint">/</code>. For example, the <code class="prettyprint">&lt;/p&gt;</code> in <code class="prettyprint">&lt;p&gt; This is a paragraph. &lt;/p&gt;</code> is the closing tag.</p></li>
+          <li><p><strong>End tag</strong>: An alternative name for a closing tag.</p></li>
+          <li><p><strong>Header</strong>: An HTML tag to indicate the text being formatted is a header. There are 6 sizes of HTML headers <code class="prettyprint">&lt;h1&gt;</code> through <code class="prettyprint">&lt;h6&gt;</code>.</p></li>
+          <li><p><strong>Whitespace</strong>: All of the &quot;empty&quot; space that includes spaces, indentation, blank lines, etc.</p></li>
+          <li><p><strong>Unordered list</strong>: A list of items that are designated with bullet points.</p></li>
+          <li><p><strong>Ordered list</strong>: A list of items designated with numbers.</p></li>
+          <li><p><strong>List item</strong>: An item in an ordered or unordered list.</p></li>
+        </ul>
+
+        <h2>HTML block Element Tags</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong><code class="prettyprint">&lt;head&gt;</code></strong>: Head</p></li>
+          <li><p><strong><code class="prettyprint">&lt;body&gt;</code></strong>: Body</p></li>
+          <li><p><strong><code class="prettyprint">&lt;p&gt;</code></strong>: Paragraph</p></li>
+          <li><p><strong><code class="prettyprint">&lt;ul&gt;</code></strong>: Unordered list</p></li>
+          <li><p><strong><code class="prettyprint">&lt;li&gt;</code></strong>: List item (must exist within a set of <code class="prettyprint">&lt;ul&gt;</code> or <code class="prettyprint">&lt;ol&gt;</code> tags)</p></li>
+          <li><p><strong><code class="prettyprint">&lt;ol&gt;</code></strong>: Ordered list</p></li>
+          <li><p><strong><code class="prettyprint">&lt;h1&gt;</code></strong> through <strong><code class="prettyprint">&lt;h6&gt;</code></strong>: Headings</p></li>
+          <li><p><strong><code class="prettyprint">&lt;title&gt;</code></strong>: Title</p></li>
+        </ul>
+
+        <h2>Example</h2>
+        <p><hr></p>
+        <div class='filename'>my-first-webpage.html</div>
+        <pre><code class="prettyprint lang-html">&lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+          &lt;head&gt;
+            &lt;title&gt;Web page #1!&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;My first web page&lt;/h1&gt;
+            &lt;h2&gt;Written with the guidance of Epicodus&lt;/h2&gt;
+
+            &lt;p&gt;This is my first web page!&lt;/p&gt;
+            &lt;p&gt;Isn&#39;t it nice?&lt;/p&gt;
+
+            &lt;p&gt;Here are some things I&#39;m going to learn about coding:&lt;/p&gt;
+            &lt;ul&gt;
+              &lt;li&gt;HTML&lt;/li&gt;
+              &lt;li&gt;CSS&lt;/li&gt;
+              &lt;li&gt;JavaScript&lt;/li&gt;
+              &lt;li&gt;And a lot more!&lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+        </code></pre>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Monday</h1>
+
+        <h1>HTML: Block Elements Part 2</h1>
+        <h2>Commands</h2>
+        <p><hr></p>
+        <ul>
+        <li><code class="prettyprint">pwd</code> command in terminal returns the directory currently located in.</li>
+        </ul>
+        <pre><code class="prettyprint lang-shell">$ pwd
+        /Users/staff/Desktop/my-first-webpage
+        </code></pre>
+        <h2>Example</h2>
+        <p><hr></p>
+        <div class='filename'>favorite-things.html</div>
+        <pre><code class="prettyprint lang-html">&lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+          &lt;head&gt;
+            &lt;title&gt;Michael&#39;s favorite things&lt;/title&gt;
+          &lt;/head&gt;
+          &lt;body&gt;
+            &lt;h1&gt;My favorite things&lt;/h1&gt;
+            &lt;h2&gt;These are a few of my favorite things.&lt;/h2&gt;
+
+            &lt;h3&gt;People&lt;/h3&gt;
+            &lt;p&gt;Here are some of my favorite people!&lt;/p&gt;
+            &lt;ul&gt;
+              &lt;li&gt;My brother Christopher&lt;/li&gt;
+              &lt;li&gt;My mom and dad:
+                &lt;ul&gt;
+                  &lt;li&gt;Steve&lt;/li&gt;
+                  &lt;li&gt;Carol&lt;/li&gt;
+                &lt;/ul&gt;
+              &lt;/li&gt;
+              &lt;li&gt;My friend Jessica&lt;/li&gt;
+              &lt;li&gt;My friend Candy&lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;h3&gt;Flavors of ice cream&lt;/h3&gt;
+            &lt;p&gt;These are my three favorites, in order:&lt;/p&gt;
+            &lt;ol&gt;
+              &lt;li&gt;Pistachio&lt;/li&gt;
+              &lt;li&gt;Malted milk chocolate&lt;/li&gt;
+              &lt;li&gt;Black licorice (really!)&lt;/li&gt;
+            &lt;/ol&gt;
+
+            &lt;p&gt;Thanks for reading about me!&lt;/p&gt;
+          &lt;/body&gt;
+        &lt;/html&gt;
+        </code></pre>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Monday</h1>
+
+        <h1>HTML: Inline Elements</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+        <li><p><strong>Inline element</strong>: HTML elements that do not appear on their own line, but instead share a line with other elements. </p></li>
+        <li><p><strong>Attribute</strong>: Additional information provided to an HTML tag. For instance, the <code class="prettyprint">href</code> attribute in an <code class="prettyprint">&lt;a&gt;</code> tag provides the URL a link should travel to. </p></li>
+        <li><p><strong>Relative path</strong>: A path to a file within the project itself. Usually referring to the location provided in as the <code class="prettyprint">href</code> attribute in an <code class="prettyprint">&lt;a&gt;</code> tag. </p></li>
+        <li><p><strong>Self-closing</strong>: An HTML element that does not require a closing tag, such as <code class="prettyprint">&lt;img&gt;</code>. </p></li>
+        </ul>
+
+        <h2>Inline Elements</h2>
+        <p><hr>
+        Some inline elements:</p>
+        <ul>
+        <li><p><code class="prettyprint">&lt;strong&gt;</code>: Makes text appear bolder. Example: <code class="prettyprint">&lt;strong&gt;</code><strong>This content is important.</strong><code class="prettyprint">&lt;/strong&gt;</code></p></li>
+        <li><p><code class="prettyprint">&lt;em&gt;</code>: Emphasizes text. Similar to italics. Example: <code class="prettyprint">&lt;em&gt;</code><em>This content is emphasized.</em><code class="prettyprint">&lt;/em&gt;</code></p></li>
+        <li><p><code class="prettyprint">&lt;a&gt;</code>: Anchor tag. Creates a link. The URL following <code class="prettyprint">href</code> denotes where the link should travel to. Example: <code class="prettyprint">&lt;a href=&quot;http://www.epicodus.com&quot;&gt;Epicodus&lt;/a&gt;</code> - link to another web page</p></li>
+        <li><p><code class="prettyprint">&lt;img&gt;</code>: Image tag. <code class="prettyprint">&lt;img src=&quot;img/kitten.jpeg&quot; alt=&quot;A photo of a cute kitten.&quot;&gt;</code> - link to an image located in <code class="prettyprint">img</code> subdirectory, with alt text</p></li>
+        </ul>
+      </div>
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Monday</h1>
+
+        <h1>Homework: READMEs</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong>README</strong>: A file located in a project&#39;s repository that provides detailed information about a project. </p></li>
+          <li><p><strong>Markdown</strong>: A simple language that uses marking annotation to format text for display in a browser.</p></li>
+          <li><p><strong>Open source</strong>: Software that is freely distributed by its creator(s) for use and distribution.</p></li>
+        </ul>
+
+        <h2>Examples</h2>
+        <p><hr></p>
+
+        <h3>Headers</h3>
+        <p>Headers are designated with a <code class="prettyprint">#</code>. Text with 1 <code class="prettyprint">#</code> is the largest and text with 6 <code class="prettyprint">#</code>s is the smallest.</p>
+        <pre><code class="prettyprint"># Best Chocolate Chip Cookies
+        ## Best Chocolate Chip Cookies
+        ### Best Chocolate Chip Cookies
+        #### Best Chocolate Chip Cookies
+        ##### Best Chocolate Chip Cookies
+        ###### Best Chocolate Chip Cookies
+        </code></pre>
+        <p>becomes</p>
+        <h1>Best Chocolate Chip Cookies</h1>
+        <h2>Best Chocolate Chip Cookies</h2>
+        <h3>Best Chocolate Chip Cookies</h3>
+        <h4>Best Chocolate Chip Cookies</h4>
+        <h5>Best Chocolate Chip Cookies</h5>
+        <h6>Best Chocolate Chip Cookies</h6>
+        <h3>Italics</h3>
+        <p>To create italics, surround the text with single underscores <code class="prettyprint">_</code>. </p>
+        <p><strong>Example:</strong><br>
+        <code class="prettyprint">_Be warned_, these will fly off of the plate!</code> </p>
+        <p>becomes:</p>
+        <p><em>Be warned</em>, these will fly off the plate!</p>
+
+        <h3>Bold</h3>
+        <p>To create a bold text, surround the text with double asterisks <code class="prettyprint">**</code>. </p>
+        <p><strong>Example:</strong>
+        <code class="prettyprint">Bake for **10 minutes** or until golden brown.</code> </p>
+        <p>becomes:</p>
+        <p>Bake for <strong>10 minutes</strong> or until golden brown.</p>
+        <h3>Ordered lists (numbered)</h3>
+        <p>Ordered list just use the number and period for each line.</p>
+        <pre><code class="prettyprint">1. Beat the butter...
+        2. Mix the flour...
+        </code></pre>
+
+        <h3>Unordered lists (bullet points)</h3>
+        <p>Bullet points are made with the <code class="prettyprint">*</code> and a single space. There must also be a blank line before the first item on the list.</p>
+        <p><strong>Example:</strong> </p>
+        <pre><code class="prettyprint">Ingredients
+
+        * butter
+        * flour
+        * brown sugar
+        * maple syrup
+        </code></pre>
+        <p>becomes:</p>
+        <p>Ingredients</p>
+        <ul>
+          <li>butter</li>
+          <li>flour</li>
+          <li>brown sugar</li>
+          <li>maple syrup</li>
+        </ul>
+
+        <h3>Links</h3>
+        <p>Two elements make up a Markdown link, the text that will display on the page surrounded by <code class="prettyprint">[]</code> and the web address where the link will go surrounded by <code class="prettyprint">()</code>. </p>
+        <p><strong>Example:</strong> <code class="prettyprint">[Click here](http://allrecipes.com/) to check out my other great recipes.</code> </p>
+        <h3>Images</h3>
+        <p>Like links except the square brackets are preceded by <code class="prettyprint">!</code> and contain <em>alt text</em> for the visually impaired, and the <code class="prettyprint">()</code> can contain a web address for an image. </p>
+        <p><strong>Example:</strong> <code class="prettyprint">![An image of a cookie](http://lorempixel.com/400/200/)</code></p>
+        <h2>Additional Resources</h2>
+        <p><hr></p>
+        <p>For more on Markdown: <a href="http://daringfireball.net/projects/markdown/syntax">Daring Fireball</a>.</p>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Tuesday</h1>
+
+        <h1>CSS: Styling Text</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong>CSS</strong>: Stands for Cascading Style Sheets. A language used to program the visual appearance of HTML elements.</p></li>
+          <li><p><strong>Rule</strong>: A block of CSS that details particular stylistic instructions to be applied to an HTML element.</p></li>
+          <li><p><strong>Selector</strong>: The part of a CSS rule that determines which HTML elements the rule applies to.</p></li>
+          <li><p><strong>Property</strong>: The characteristic a CSS rule is altering. (For example, <code class="prettyprint">color</code>, or <code class="prettyprint">font-size</code>).</p></li>
+          <li><p><strong>Value</strong>: The attribute a CSS rule is applying to the specified property.</p></li>
+        </ul>
+
+        <h2>Examples</h2>
+        <p><hr></p>
+        <div class="filename">styles.css</div>
+        <pre><code class="prettyprint lang-css">h1 {
+          color: #0000ff;
+          text-align: center;
+        }
+
+        h2 {
+          font-style: italic;
+          text-align: center;
+        }
+
+        p {
+          font-family: sans-serif;
+        }
+
+        ul {
+          font-size: 20px;
+          line-height: 30px;
+        }
+        </code></pre>
+        <p>In the code above...</p>
+        <ul>
+          <li>Each individual block is a <strong>rule</strong>.</li>
+          <li><code class="prettyprint">h1</code>, <code class="prettyprint">h2</code>, <code class="prettyprint">p</code>, and <code class="prettyprint">ul</code> are all <strong>selectors</strong>.</li>
+          <li><code class="prettyprint">color</code>, <code class="prettyprint">text-align</code>, <code class="prettyprint">font-style</code>, <code class="prettyprint">font-family</code>, <code class="prettyprint">font-size</code> and <code class="prettyprint">line-height</code> are all <strong>properties</strong>.</li>
+          <li><code class="prettyprint">blue</code>, <code class="prettyprint">center</code>, <code class="prettyprint">italic</code>, <code class="prettyprint">sans-serif</code>, <code class="prettyprint">20px</code> and <code class="prettyprint">30px</code> are all <strong>values</strong>. </li>
+          <li>The entire file <em>styles.css</em> is a <strong>stylesheet</strong>. </li>
+        </ul>
+
+        <h2>Additional Resources</h2>
+        <p><hr></p>
+        <ul>
+          <li><a href="http://csszengarden.com/">CSS Zen Garden</a></li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Tuesday</h1>
+
+        <h1>Debugging HTML and CSS</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong>DevTools</strong> or <strong>Developer Tools</strong>: An area of the Google Chrome web browser that offers debugging options, and other tools helpful to web developers to assist in locating problems, measuring performance, etc. </p></li>
+          <li><p><strong>JavaScript Console</strong>: Location in Google Chrome where a website&#39;s errors are logged, and other debugging tools are available. </p></li>
+          <li><p><strong>Inspecting an element</strong>: The act of looking at the code for a specific element on the page. </p></li>
+        </ul>
+
+        <h2>How To</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong>Open JavaScript Console in Chrome:</strong> In Chrome, click on the menu button (it looks like ☰ on the right side of address bar), go to the <em>More Tools</em> , and click <em>Developer Tools</em>. You may also have to click the <em>Console</em> tab at the top of the window that pops open. </p></li>
+          <li><p><strong>Keyboard shortcut for JavaScript Console in Chrome:</strong> CMD + Option + J</p></li>
+          <li><p><strong>How to inspect an element</strong>: Right click on an element of a web page, and select &quot;Inspect&quot; from the resulting menu of options.</p></li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Tuesday</h1>
+
+        <h1>GitHub Pages</h1>
+        <h2>Using GitHub Pages</h2>
+        <p><hr></p>
+        <p>After you&#39;ve finished your project, you can create a <code class="prettyprint">gh-pages</code> branch either locally or on GitHub to allow your project to be viewable at <em>my-github-username.github.io/repository-name</em></p>
+
+        <h3>Create Branch Locally</h3>
+        <p>To create a <code class="prettyprint">gh-pages</code> branch locally and then push to GitHub:</p>
+        <pre><code class="prettyprint lang-shell">$ git branch gh-pages
+        $ git checkout gh-pages
+        $ git push [remote nickname] gh-pages
+        </code></pre>
+
+        <h3>Create Branch on GitHub</h3>
+        <p>To create a <code class="prettyprint">gh-pages</code> branch from GitHub:</p>
+        <ol>
+          <li>Click the branch drop down on the left (when viewing the repository on GitHub)</li>
+          <li>Type <code class="prettyprint">gh-pages</code>, </li>
+          <li>Select <code class="prettyprint">Create branch: gh-pages</code></li>
+        </ol>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Tuesday</h1>
+        <h1>Git Branching</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><p><strong>Branching</strong>: The act of making multiple copies of the same code in the same project. Usually in order to do different things with the same code base, or to allow multiple people to work on the same code at the same time. </p></li>
+          <li><p><strong>Branch</strong>: Another copy of your code </p></li>
+          <li><p><strong>Master Branch</strong>: Like the &quot;final draft&quot; of your code. </p></li>
+          <li><p><strong>Feature Branches</strong>: A common term for branches that are <em>not</em> <code class="prettyprint">master</code>. Usually branches meant for experimenting with new features before adding them to the final version of the project. </p></li>
+        </ul>
+
+        <h2>Tips</h2>
+        <p><hr></p>
+        <ul>
+          <li><p>The <code class="prettyprint">$ git branch</code> command with nothing after it will display all branches in a project. The branch you&#39;re currently located in will be denoted with an asterisk <code class="prettyprint">*</code>.</p></li>
+          <li><p>The <code class="prettyprint">$ git branch</code> command with a branch name after it (ie: <code class="prettyprint">$ git branch &lt;name-of-new-branch&gt;</code>) will create a new branch of the name you specify. Branch names should be short and meaningful, and describe the reason for the branch. </p></li>
+          <li><p>We can switch which branch we&#39;re viewing by using the <code class="prettyprint">$ git checkout</code> command with the name of the branch we&#39;d like to see. For instance, <code class="prettyprint">$ git checkout blue_theme</code> will move us to a branch named <code class="prettyprint">blue_theme</code>. </p></li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Tuesday</h1>
+        <h1>Git Merging</h1>
+
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><strong>Merging</strong>: The act of combining two different branches together. </li>
+        </ul>
+
+        <h2>Overview</h2>
+        <p><hr></p>
+        <ul>
+          <li><p>To merge one branch into another, you must first navigate to the branch you&#39;d like to introduce new code into.</p></li>
+          <li><p>Once located in that branch, the command <code class="prettyprint">$ git merge &lt;branch-name&gt;</code> will merge the commits from the outside branch into the current branch.</p></li>
+          <li><p>If the two branches don&#39;t contain edits to the same areas, Git will be able to merge these two branches automatically. </p></li>
+          <li><p>If two branches contain edits to the same areas of code, this will result in a merge conflict, and Git will request you resolve it manually. We&#39;ll explore merge conflicts in detail later on. </p></li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Wednesday</h1>
+        <h1>Styling with Classes</h1>
+
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+          <li><strong>Lorem ipsum</strong>: Text that is used as filler to display or demonstrate an area of text; it looks like Latin and allows the user to focus on the overall layout without focusing on the meaning of words. Fun fact: &quot;lorem ipsum&quot; derives from the Latin for &quot;pain itself&quot;.</li>
+        </ul>
+
+        <h2>Examples</h2>
+        <p><hr></p>
+        <p>Add a class to one or more HTML tags:</p>
+        <div class="filename">webpage-with-classes.html</div>
+        <pre><code class="prettyprint lang-html">&lt;p class=&quot;important&quot;&gt;Important stuff should be:&lt;/p&gt;
+        &lt;ul class=&quot;important&quot;&gt;
+          &lt;li&gt;red,&lt;/li&gt;
+          &lt;li&gt;bold, and&lt;/li&gt;
+          &lt;li&gt;big, but only for paragraphs.&lt;/li&gt;
+        &lt;/ul&gt;
+        </code></pre>
+        <p>Create CSS rules for that class:</p>
+        <div class="filename">styles-for-classes.css</div>
+        <pre><code class="prettyprint lang-css">.important {
+          color: red;
+          font-weight: bold;
+        }
+        </code></pre>
+        <p>Create a CSS rule for a tag with only a certain class:</p>
+        <div class="filename">styles-for-classes.css</div>
+        <pre><code class="prettyprint lang-css">p.important {
+          font-size: 24px;
+        }
+        </code></pre>
+        <p>Link to an email address in HTML:</p>
+        <pre><code class="prettyprint">&lt;a href=&quot;mailto:<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7b161218131a1e173b1e0b1218141f0e0855181416">[email&#160;protected]</a>&quot;&gt;
+        </code></pre>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Wednesday</h1>
+        <h2>Examples</h2>
+        <p><hr></p>
+        <p>Group elements together with similar styles using <code class="prettyprint">&lt;div&gt;</code>s. For example, change this:</p>
+        <div class="filename">stuff.html</div>
+        <pre><code class="prettyprint lang-html">&lt;h2 class=&quot;important&quot;&gt;You better read this&lt;/h2&gt;
+        &lt;p class=&quot;important&quot;&gt;Here are the things you really need to know.&lt;/p&gt;
+        &lt;img class=&quot;important&quot; src=&quot;scary.png&quot; alt=&quot;This is what will happen if you don&#39;t read it.&quot;&gt;
+        </code></pre>
+        <p>to this:</p>
+        <div class="filename">stuff.html</div>
+        <pre><code class="prettyprint lang-html">&lt;div class=&quot;important&quot;&gt;
+          &lt;h2&gt;You better read this&lt;/h2&gt;
+          &lt;p&gt;Here are the things you really need to know.&lt;/p&gt;
+          &lt;img src=&quot;scary.png&quot; alt=&quot;This is what will happen if you don&#39;t read it.&quot;&gt;
+        &lt;/div&gt;
+        </code></pre>
+        <p>Create in-line styles using <code class="prettyprint">&lt;span&gt;</code>s:</p>
+        <div class="filename">different.html</div>
+        <pre><code class="prettyprint lang-html">&lt;p&gt;Something is &lt;span class=&quot;special&quot;&gt;different&lt;/span&gt; in this sentence.&lt;/p&gt;
+        </code></pre>
+        <p>Style <code class="prettyprint">&lt;div&gt;</code>s and <code class="prettyprint">&lt;span&gt;</code>s just like you would any other element, without explicitly using <code class="prettyprint">div</code> or <code class="prettyprint">span</code> in the selector:</p>
+        <div class="filename">styles.css</div>
+        <pre><code class="prettyprint lang-css">.important {
+          color: red;
+        }
+        </code></pre>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Wednesday</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+        <li><strong>Float</strong>: A CSS option that assists in layout by allowing elements on the page to be placed next to each other in the layout (values include right or left).</li>
+        </ul>
+        <h2>Examples</h2>
+        <p><hr></p>
+        <p>Use floats to make elements float to one side of the page. Other elements will wrap around that element.</p>
+        <p>Float an image to the left:</p>
+        <div class="filename">floating-image.html</div>
+        <pre><code class="prettyprint lang-css">&lt;img class=&quot;main&quot; src=&quot;img/walrus.jpg&quot; alt=&quot;A walrus basking on a rock.&quot;&gt;
+        </code></pre>
+        <div class="filename">styles.css</div>
+        <pre><code class="prettyprint lang-css">img.main {
+          float: left;
+        }
+        </code></pre>
+        <p>Create a sidebar:</p>
+        <div class="filename">sidebar.html</div>
+        <pre><code class="prettyprint lang-html">&lt;h1&gt;Title&lt;/h1&gt;
+        &lt;div class=&quot;sidebar&quot;&gt;
+          &lt;h2&gt;Sidebar&lt;/h2&gt;
+          &lt;p&gt;Some sidebar stuff.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;p&gt;Main page stuff.&lt;/p&gt;
+        </code></pre>
+        <div class="filename">sidebar-styles.css</div>
+        <pre><code class="prettyprint lang-css">.sidebar {
+          float: right;
+        }
+        </code></pre>
+        <p>Make a column layout:</p>
+        <div class="filename">columns.html</div>
+        <pre><code class="prettyprint lang-html">&lt;div class=&quot;column&quot;&gt;
+          &lt;p&gt;Column 1&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;column&quot;&gt;
+          &lt;p&gt;Column 2&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;column&quot;&gt;
+          &lt;p&gt;Column 3&lt;/p&gt;
+        &lt;/div&gt;
+        </code></pre>
+        <div class="filename">column-styles.css</div>
+        <pre><code class="prettyprint lang-css">.column {
+          width: 300px;
+          float: left;
+        }
+        </code></pre>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Wednesday</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+        <li><strong>Box model</strong>: A model that shows the properties of how the space around an element is assigned and manipulated with CSS.</li>
+        </ul>
+        <p><img src="https://www.dropbox.com/s/50f355qx6gsbahf/intro-box-model-diagram.png?raw=1" alt="A diagram of the CSS box model."></p>
+        <h2>Example</h2>
+        <p><hr></p>
+        <pre><code class="prettyprint lang-css">.my-class {
+          margin: 12px;
+          border: 2px solid green;
+          padding: 4px;
+          background-color: orange;
+        }
+        </code></pre>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Wednesday</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+        <li><p><strong>Inheritance</strong>: The process by which children elements share the properties of their parent elements.</p></li>
+        <li><p><strong>Specificity</strong>: In the instance that two styles conflict, the style that is applied will be the most specific of the two. For example, a style for a paragraph tag would not be applied if there was a style for a link within a paragraph. The link within the paragraph reference is more specific than paragraph.</p></li>
+        <li><p><strong>Inline style</strong>: Style that is added directly into the HTML for an element. Inline styling takes precedence over styling in your CSS files. It is not considered good practice to style HTML this way.</p></li>
+        </ul>
+        <h2>Examples</h2>
+        <p><hr></p>
+        <p>Elements inherit styles from their parents. This rule gives every element on the page the San Serif font:</p>
+        <pre><code class="prettyprint lang-css">body {
+          font-family: sans-serif;
+        }
+        </code></pre>
+        <p>You can nest selectors:</p>
+        <div class="filename">nesting-styles.css</div>
+        <pre><code class="prettyprint lang-css">.sidebar p img{
+          display: block;
+        }
+        </code></pre>
+        <div class="filename">nesting.html</div>
+        <pre><code class="prettyprint lang-html">&lt;div class=&quot;sidebar&quot;&gt;
+          &lt;p&gt;This image: &lt;img src=&quot;whatever.jpg&quot; alt=&quot;whatever&quot;&gt; will be on its own line.&lt;/p&gt;
+        &lt;/div&gt;
+        </code></pre>
+        <p>More specific rules take precedence over less specific rules:</p>
+        <div class="filename">specificity-styles.css</div>
+        <pre><code class="prettyprint lang-css">p {
+          background-color: green;
+        }
+
+        p.slow {
+          background-color: yellow;
+        }
+
+        p.slow .stop {
+          background-color: red;
+        }
+        </code></pre>
+        <div class="filename">specificity.html</div>
+        <pre><code class="prettyprint lang-html">&lt;p&gt;This will have a green background.&lt;/p&gt;
+        &lt;p class=&quot;slow&quot;&gt;This will have a yellow background. &lt;span class=&quot;stop&quot;&gt;And this a red background.&lt;/span&gt;&lt;/p&gt;
+        </code></pre>
+        <h2>Tips</h2>
+        <p><hr></p>
+        <ul>
+        <li>In the case of conflicting rules, the last one wins. There are more complicated rules that we won&#39;t get into.</li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Wednesday</h1>
+        <h2>Summary</h2>
+        <p><hr></p>
+        <ul>
+        <li><p>A particular <code class="prettyprint">id</code> can only be attached to one element per web page, while the same <code class="prettyprint">class</code> can be attached to many different elements on the same page.</p></li>
+        <li><p>When referencing <strong>classes</strong> in CSS, use: <code class="prettyprint">.</code> (e.g. <code class="prettyprint">.intro</code>)</p></li>
+        <li><p>When references <strong>ids</strong> in CSS, use: <code class="prettyprint">#</code> (e.g. <code class="prettyprint">#line2</code>)</p></li>
+        </ul>
+      </div>
+
+      <div class="tab-pane" id="cheat-sheet">
+        <h1 class="weekDay">Week One: Wednesday</h1>
+        <h2>Terminology</h2>
+        <p><hr></p>
+        <ul>
+        <li><p><strong>Media query</strong>: A block of CSS applied only when certain conditions about the size or type of screen/window a user is viewing our content with are true. (ie: CSS associated with a media query with a max-width of 500px would only apply its styles when the viewport width is below 500px). </p></li>
+        <li><p><strong>Breakpoint</strong>: The point at which a media query&#39;s condition becomes true. A media query with a max-width of 500px will apply its styles when the viewport is less than 500px. 500px is then the break point. </p></li>
+        <li><p><strong>Viewport</strong>: The tool a user is viewing content with. Usually a browser window on a computer, phone, or tablet. </p></li>
+        <li><p><strong>Responsive web design</strong>: An approach to web design focused around providing the best viewing and navigation experience for the specific device and screen size a user is viewing content with. </p></li>
+        <li><p><strong>Media types</strong>: The type of media device the user is viewing content with (such as print, screen, handheld, or all) </p></li>
+        <li><p><strong>Media features</strong>: Specific properties about the manner the user is viewing content; including width and height of viewport, orientation of device, etc. </p></li>
+        </ul>
+        <h2>Examples</h2>
+        <p><hr></p>
+        <p>The following query will make the background red and text white when the browser window has a width below 768px: </p>
+        <pre><code class="prettyprint lang-css">@media screen and (max-width:  768px)  {
+            body {
+                background:  #FF6347;
+                color: #FFF;
+            }
+        }
+        </code></pre>
+        <p>In the code above:</p>
+        <ul>
+        <li><code class="prettyprint">screen</code> is the <strong>media type</strong>.</li>
+        <li><code class="prettyprint">768px</code> is the <strong>breakpoint</strong>.</li>
+        <li><code class="prettyprint">max-width</code> is a <strong>media feature</strong>.</li>
+        <li><code class="prettyprint">body</code> is a <strong>selector</strong>.</li>
+        <li><code class="prettyprint">background</code> and <code class="prettyprint">color</code> are <strong>properties</strong>.</li>
+        <li><code class="prettyprint">#FF6347</code> and <code class="prettyprint">#FFF</code> are <strong>values</strong>. </li>
+        </ul>
+        <h2>Additional Resources</h2>
+        <p><hr></p>
+        <ul>
+        <li>Mozilla Developer Network - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries">Using media queries</a></li>
+        <li>Mozilla Developer Network - <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@media">@media</a></li>
+        <li>Example usages of media queries - <a href="http://mediaqueri.es/">Mediaquer.ies</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </body>
+</html>
